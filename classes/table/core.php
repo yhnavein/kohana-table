@@ -11,6 +11,8 @@
  * Adheres to HTML Table specifications with head, body, colgroups, captions and footer
  * Add custom HTML at any point of the build process
  *
+ * @package Table
+ * @category Base
  * @author Dave Stewart
  * @version 1.0
  * @access public

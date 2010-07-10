@@ -8,6 +8,8 @@
  * Check the Advanced and Extending demos here: http://kohana.keyframesandcode.com/demos/table/
  * Feel free to change or amend this class as you see fit!
  *
+ * @package Table
+ * @category Extensions
  * @author Dave Stewart
  * @version 1.0
  * @access public
