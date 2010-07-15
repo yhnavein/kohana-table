@@ -488,7 +488,7 @@ class Table_Core {
 	 * @param	string	attribute value
 	 * @return
 	 */
-	public function set_attributes($arg1, $arg2)
+	public function set_attributes($arg1, $arg2=NULL)
 	{
 		preg_match_all('/(\w+)\s*=\s*"([^"]*)"/', $arg1, $matches);
 		if(count($matches[0]) > 0)
