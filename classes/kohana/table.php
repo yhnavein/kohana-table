@@ -18,7 +18,7 @@
  * @access public
  */
 
-class Table_Core {
+class Kohana_Table {
 
 // -----------------------------------------------------------------------------------------------
 // VARIABLES
@@ -168,10 +168,10 @@ class Table_Core {
 		// check for ORM
 		if($data instanceof Database_Result)
 		{
-                    foreach ($data as $orm => $value)
-                    {
-                       array_push($this->body_data, $value->as_array());
-                    }
+			foreach ($data as $orm => $value)
+			{
+				array_push($this->body_data, $value->as_array());
+			}
 		}
 
 		// add data
@@ -511,7 +511,7 @@ class Table_Core {
 // -----------------------------------------------------------------------------------------------
 
 	/**
-	 * Table_Core::set_callback()
+	 * Kohana_Table::set_callback()
 	 *
 	 * Set callbacks for cell rendering etc
 	 * Callback types must be one of 'body', 'heading', 'column', 'row', or 'row_title'. Only 'column' takes an additional
@@ -1278,7 +1278,7 @@ class Table_Core {
 		// return
 		return $html;
 	}
-} // End Table_Core
+} // End Kohana_Table
 
 
 // helper class, Cell
