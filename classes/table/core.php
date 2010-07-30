@@ -168,16 +168,10 @@ class Table_Core {
 		// check for ORM
 		if($data instanceof Database_Result)
 		{
-			foreach($data as $orm)
-			{
-				$obj	= array();
-				$keys	= $orm->as_array();
-				foreach($keys as $key => $value)
-				{
-					$obj[$key] = $orm->{$key};
-				}
-				array_push($this->body_data, $obj);
-			}
+                    foreach ($data as $orm => $value)
+                    {
+                       array_push($this->body_data, $value->as_array());
+                    }
 		}
 
 		// add data
