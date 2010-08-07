@@ -282,7 +282,7 @@ class Kohana_Table {
 		}
 		else
 		{
-			$data = func_generate_args();
+			$data = func_get_args();
 			$append = FALSE;
 		}
 
