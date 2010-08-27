@@ -168,9 +168,31 @@ class Kohana_Table {
 		// check for ORM
 		if($data instanceof Database_Result)
 		{
-			foreach ($data as $orm => $value)
+			foreach ($data as $value)
 			{
 				array_push($this->body_data, $value->as_array());
+			}
+		}
+
+		// check for Jelly
+		else if($data instanceof Jelly_Collection)
+		{
+			foreach($data as $orm)
+			{
+				$obj = array();
+				$keys = $orm->as_array();
+				foreach($keys as $key => $value)
+				{
+					if($orm->{$key} instanceof Jelly_Model)
+					{
+						$obj[$key] = $orm->{$key}->name();
+					}
+					else
+					{
+						$obj[$key] = $orm->{$key};
+					}
+				}
+				array_push($this->body_data, $obj);
 			}
 		}
 
