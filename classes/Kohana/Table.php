@@ -33,7 +33,8 @@ class Kohana_Table {
 	// attributes
 	protected $table_attributes = array(
 			'cellspacing' => 0,
-			'cellpadding' => 3
+			'cellpadding' => 0,
+			'class' => 'table table-striped table-hover'
 		);					                          // array
 	protected $column_attributes           = NULL;    // array: width, class, align and style
 
